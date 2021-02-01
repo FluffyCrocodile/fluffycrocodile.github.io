@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Edit_Student</title>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {font-family: "Times New Roman", Times, serif;}
+
+        .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        }
+
+        .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #4CAF50;
+        }
+
+        .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+        }
+
+        .button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid #e70404;
+        }
+
+        .button2:hover {
+        background-color: #ba0000;
+        color: white;
+        }
+
+    </style>
+  </head>
+  <body id="subpage3bod">
+    <a id="Mainpage" href="index.html"><button class="button button2">Back To Main DataBase</button></a>
+    <div id='div2'>
+    <h1>Enter the ID of the Student you wish to edit:</h1>
+      <div id='div2'>
+          <label>Student ID:
+         <input type="number" name="text_input" id="studentID">
+          </label>
+          <button>Edit</button>
+    </div>
+
+    <table>
+      <caption>Matched Results:</caption>
+      <thead>
+          <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Student ID</th>
+              <th>Email</th>
+              <th>GPA</th>
+              <th>club ID</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Joe</td>
+              <td>Mama</td>
+              <td>123456789</td>
+              <td>mamaj@oreoplate.edu</td>
+              <td>6.9</td>
+              <td>987654321</td>
+          </tr>
+      </tbody>
+    </table>
+    </table>
+
+
+      <h1 size="6">Enter the new updated information</h1>
+      <div id='div2'><label>New first name:
+        <input type="text" name="text_input" size="25" maxlength="120" id="firstName">
+     </label></div>
+     <div id='div2'><label>New last name:
+        <input type="text" name="text_input" size="25" maxlength="120" id="lastName">
+     </label></div>
+      <div id=id_Div><label>New Student ID:
+         <input type="text" name="text_input" size="30" maxlength="100" id="studentID">
+      </label></div>
+      <div id='email_Div'><label> Email:
+         <input type="text" name="text_input" id="email">
+      </label></div>
+      <div id='gpa_Div'><label> GPA:
+         <input type="number" name="number_input" id="gpa">
+      </label></div>
+      <div id='club_Div'><label> Club ID:
+        <input type="number" name="text_input" size="30" maxlength="100" id="clubID">
+     </label></div>
+     <br />
+    <button class="button button1">Update!</button>
+
+
+    <h1 size="6">Run a Search Query from Student Database:</h1>
+      <div id='div2'><label> first name:
+         <input type="text" name="text_input" size="25" maxlength="120" id="firstName">
+      </label></div>
+      <div id='div2'><label> last name:
+         <input type="text" name="text_input" size="25" maxlength="120" id="lastName">
+      </label></div>
+      <div id=id_Div><label>student ID:
+        <input type="text" name="text_input" size="30" maxlength="100" id="studentID">
+      </label></div>
+      <div id='div2'><label> email:
+         <input type="text" name="text_input" size="25" maxlength="120" id="email">
+      </label></div>
+      <div id='div2'><label> GPA:
+         <input type="number" name="text_input" size="25" maxlength="120" id="gpa">
+      </label></div>
+      <div id='div2'><label> club ID:
+        <input type="number" name="text_input" size="25" maxlength="120" id="club">
+     </label></div>
+      <br />
+    <button class="button button1">Search!</button>
+
+    <table>
+      <caption>Matched Results:</caption>
+      <thead>
+          <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Student ID</th>
+              <th>Email</th>
+              <th>GPA</th>
+              <th>club ID</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Joe</td>
+              <td>Mama</td>
+              <td>123456789</td>
+              <td>mamaj@oreoplate.edu</td>
+              <td>6.9</td>
+              <td>987654321</td>
+              <td class="delete_Button"><input type="button" value="Del" /></td>
+          </tr>
+      </tbody>
+      <tbody>
+        <tr>
+            <td>Shrek</td>
+            <td>Donkey</td>
+            <td>111111111</td>
+            <td>donkeys@oreoplate.edu</td>
+            <td>4.2</td>
+            <td>222222222</td>
+            <td class="delete_Button"><input type="button" value="Del" /></td>
+        </tr>
+    </tbody>
+    </table>
+
+  </body>
+</html>
