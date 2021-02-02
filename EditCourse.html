@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Edit_Student</title>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {font-family: "Times New Roman", Times, serif;}
+
+        .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        }
+
+        .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #4CAF50;
+        }
+
+        .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+        }
+
+        .button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid #e70404;
+        }
+
+        .button2:hover {
+        background-color: #ba0000;
+        color: white;
+        }
+
+    </style>
+  </head>
+  <body id="subpage3bod">
+    <a id="Mainpage" href="index.html"><button class="button button2">Back To Main DataBase</button></a>
+    <a id="editCourseRelationship" href="#"><button>Edit Relationship</button></a>
+    <div id='div2'>
+    <h1>Enter the ID of the Course you wish to edit:</h1>
+      <div id='div2'>
+          <label>Course ID:
+         <input type="number" name="text_input" id="studentID">
+          </label>
+          <button>Edit</button>
+    </div>
+
+    <table>
+      <caption>Matched Results:</caption>
+      <thead>
+          <tr>
+            <th>Name</th>
+            <th>Course ID</th>
+            <th>Credits</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>CS 160</td>
+            <td>123456789</td>
+            <td>3</td>
+          </tr>
+      </tbody>
+    </table>
+    </table>
+
+
+      <h1 size="6">Enter the new updated information</h1>
+      <div id='div2'><label>New Name:
+        <input type="text" name="text_input" size="25" maxlength="120" id="name">
+     </label></div>
+      <div id=id_Div><label>New Course ID:
+         <input type="text" name="text_input" size="30" maxlength="100" id="courseID">
+      </label></div>
+      <div id='email_Div'><label>New Credits:
+         <input type="text" name="text_input" id="creditsID">
+      </label></div>
+     <br />
+    <button class="button button1">Update!</button>
+
+
+    <h1 size="6">Run a Search Query from Course Database:</h1>
+    <div id='div2'><label>New Name:
+        <input type="text" name="text_input" size="25" maxlength="120" id="name">
+     </label></div>
+      <div id=id_Div><label>New Course ID:
+         <input type="text" name="text_input" size="30" maxlength="100" id="courseID">
+      </label></div>
+      <div id='email_Div'><label>New Credits:
+         <input type="text" name="text_input" id="creditsID">
+      </label></div>
+     <br />
+    <button class="button button1">Search!</button>
+
+    <table>
+      <caption>Matched Results:</caption>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Course ID</th>
+              <th>Credits</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>CS 160</td>
+              <td>123456789</td>
+              <td>3</td>
+              <td class="delete_Button"><input type="button" value="Del" /></td>
+          </tr>
+      </tbody>
+      <tbody>
+        <tr>
+            <td>CS 161</td>
+            <td>123456787</td>
+            <td>3</td>
+            <td class="delete_Button"><input type="button" value="Del" /></td>
+        </tr>
+    </tbody>
+    </table>
+
+  </body>
+</html>
