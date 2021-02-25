@@ -1,0 +1,51 @@
+<html>
+
+<form id='search_people' action='' method=''>
+<!--- this form does not submit directly, the button handles all the interaction with backend -->
+    <label> Search people for first name starting with:</label>
+    <input id='first_name_search_string' type='text' name='first_name_search_string' value=''>
+    <input type="button" value="Search" onclick="searchPeopleByFirstName()">
+</form>
+
+<a id="Mainpage" href="../index.html"><button class="button button2">Back To Main DataBase</button></a>
+
+    <h3>Add new faculty:</h3>
+    <form id="addperson" action="/faculty" method="post">
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        Department: <input type="tect" name="dep"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br/>
+    <form id='filter_people' action='' method=''>
+    <!--- this form does not submit directly, the button handles all the interaction with backend -->
+        <label> Filter by ID </label>
+        <select id='homeworld_filter' name="faqfilter"> 
+            {{#each ids}}
+            <option value={{id}}>{{id}}</option>
+            {{/each}}
+        </select><br>
+        <input type="button" value="Filter" onclick="filterFacultyByID()">
+    </form>
+
+    <h3>Current Faculty:</h3>
+    <table>
+        <thead>
+            <th>First Name</th> 
+            <th>Last Name</th> 
+            <th>Faculty ID</th>
+            <th>Department</th>
+        </thead> 
+        <tbody>
+            {{#each faculty}} 
+            <tr> 
+                <td>{{first_name}}</td>
+                <td>{{last_name}}</td> 
+                <td>{{facultyID}}</td>
+                <td>{{department}}</td> 
+            </tr> 
+            {{/each}} 
+        </tbody> 
+    </table>
+
+</html>
