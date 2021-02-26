@@ -1,0 +1,77 @@
+<html>
+    <label for="studentcourse">Add student to course</label>
+    <form action="/studentCourse" method="post">
+        <select name="studentID" id="studentgrab">
+            {{#each students}}
+            <option value={{studentID}}>{{first_name}} {{last_name}}</option>
+            {{/each}}
+        </select>
+         <select name="courseID" id="coursegrab">
+            {{#each course}}
+            <option value={{courseID}}>{{course_name}}</option>
+            {{/each}}
+        </select>
+        <input type="submit" value="Add to Class">
+    </form>
+
+
+    <h3>Current Students:</h3>
+    <table>
+        <thead>
+            <th>First Name</th> 
+            <th>Last Name</th> 
+            <th>GPA</th>
+            <th>Student ID</th>
+            <th>Club ID</th>
+        </thead> 
+        <tbody>
+            {{#each students}} 
+            <tr> 
+                <td>{{first_name}}</td>
+                <td>{{last_name}}</td> 
+                <td>{{GPA}}</td> 
+                <td>{{studentID}}</td>
+                <td>{{fk_clubID}}</td> 
+            </tr> 
+            {{/each}} 
+        </tbody> 
+    </table>
+        
+        <h3>Current Courses:</h3>
+    <table>
+        <thead> 
+            <th>Course Name</th> 
+            <th>Credits</th> 
+            <th>CourseID</th>
+        </thead> 
+        <tbody>
+            {{#each course}} 
+            <tr> 
+                <td>{{course_name}}</td> 
+                <td>{{credits}}</td> 
+                <td>{{courseID}}</td> 
+            </tr> 
+            {{/each}} 
+        </tbody> 
+    </table> 
+    </html>
+
+
+    <h3>Current Classes Students are taking:</h3>
+    <table>
+        <thead>
+            <th>StudentID</th> 
+            <th>CourseID</th> 
+            <th>EnrollmentID</th>
+        </thead> 
+        <tbody>
+            {{#each studentCourse}} 
+            <tr> 
+                <td>{{fk_studentID}}</td>
+                <td>{{fk_courseID}}</td> 
+                <td>{{enrollmentID}}</td>
+            </tr> 
+            {{/each}} 
+        </tbody> 
+    </table>
+</html>

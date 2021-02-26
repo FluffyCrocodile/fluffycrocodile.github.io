@@ -1,0 +1,69 @@
+<html>
+
+<a id="Mainpage" href="../index.html"><button class="button button2">Back To Main DataBase</button></a>
+
+    <h3>Set up a course for a faculty to teach:</h3>
+    <form id="addperson" action="/facultycourse" method="post">
+        Faculty ID: <input type="text" name="fid"><br>
+        Course ID: <input type="text" name="cid"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br/>
+
+    <h3>Current Faculty:</h3>
+    <table>
+        <thead>
+            <th>First Name</th> 
+            <th>Last Name</th> 
+            <th>Faculty ID</th>
+            <th>Department</th>
+        </thead> 
+        <tbody>
+            {{#each faculty}} 
+            <tr> 
+                <td>{{first_name}}</td>
+                <td>{{last_name}}</td> 
+                <td>{{facultyID}}</td>
+                <td>{{department}}</td> 
+            </tr> 
+            {{/each}} 
+        </tbody> 
+    </table>
+
+    <h3>Current Courses:</h3>
+    <table>
+        <thead> 
+            <th>Course Name</th> 
+            <th>Credits</th> 
+            <th>CourseID</th>
+        </thead> 
+        <tbody>
+            {{#each course}} 
+            <tr> 
+                <td>{{course_name}}</td> 
+                <td>{{credits}}</td> 
+                <td>{{courseID}}</td> 
+            </tr> 
+            {{/each}} 
+        </tbody> 
+    </table> 
+
+    <h3>Teaching Relationships:</h3>
+    <table>
+        <thead> 
+            <th>Teaching ID</th> 
+            <th>Faculty ID</th> 
+            <th>Course ID</th>
+        </thead> 
+        <tbody>
+            {{#each faqcou}} 
+            <tr> 
+                <td>{{teachingID}}</td> 
+                <td>{{fk_facultyID}}</td> 
+                <td>{{fk_courseID}}</td> 
+            </tr> 
+            {{/each}} 
+        </tbody> 
+    </table> 
+
+</html>
