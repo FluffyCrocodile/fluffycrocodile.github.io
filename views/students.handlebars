@@ -38,7 +38,9 @@
                 <td>{{last_name}}</td> 
                 <td>{{GPA}}</td> 
                 <td>{{studentID}}</td>
-                <td>{{fk_clubID}}</td> 
+                <td>{{fk_clubID}}</td>
+                <td><button onclick="deletePerson({{studentID}})">Delete</button></td>
+                <td><a href="/students/{{studentID}}">Update</a></td>
             </tr> 
             {{/each}} 
         </tbody> 
