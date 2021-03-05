@@ -26,6 +26,8 @@ app.use('/clubs', require('./clubs.js'));
 app.use('/course', require('./course.js'));
 app.use('/faculty', require('./faculty.js'));
 app.use('/students', require('./students.js'));
+app.use('/studentCourse', require('./studentCourse.js'));
+app.use('/facultycourse', require('./facultycourse.js'));
 app.use('/', express.static('public'));
 
 app.use(function(req,res){

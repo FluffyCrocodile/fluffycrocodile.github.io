@@ -201,7 +201,11 @@ module.exports = function(){
         console.log(req.body.homeworld)
         console.log(req.body)
         var mysql = req.app.get('mysql');
+<<<<<<< HEAD
         var sql = "INSERT INTO FacultyCourse (fk_facultyID, , fk_courseID) VALUES (?,?)";
+=======
+        var sql = "INSERT INTO FacultyCourse (fk_facultyID, fk_courseID) VALUES (?,?)";
+>>>>>>> 71969357bda2ba4a61d853140eafc33c9cca2154
         var inserts = [req.body.fid, req.body.cid];
         sql = mysql.pool.query(sql,inserts,function(error, results, fields){
             if(error){
